@@ -439,12 +439,14 @@ table {
 /**
  * Grid
  */
-main, header, .hero {
+main, header, .hero, .health,
+.feed {
   max-width: 70rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%; }
-  main:after, header:after, .hero:after {
+  main:after, header:after, .hero:after, .health:after,
+  .feed:after {
     content: "";
     display: table;
     clear: both; }
@@ -480,6 +482,82 @@ main, header, .hero {
   width: 100%; }
   .hero__header:last-child {
     margin-right: 0; }
+
+.health__wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .health__wrapper:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 44em) {
+    .health__wrapper {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%;
+      max-width: 60rem; }
+      .health__wrapper:last-child {
+        margin-right: 0; } }
+
+.feed__wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .feed__wrapper:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 44em) {
+    .feed__wrapper {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%;
+      max-width: 60rem; }
+      .feed__wrapper:last-child {
+        margin-right: 0; } }
+
+.health__image,
+.feed__image {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .health__image:last-child,
+  .feed__image:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 44em) {
+    .health__image,
+    .feed__image {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 47.58542%; }
+      .health__image:last-child,
+      .feed__image:last-child {
+        margin-right: 0; } }
+
+.health__explanation,
+.feed__explanation {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .health__explanation:last-child,
+  .feed__explanation:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 44em) {
+    .health__explanation,
+    .feed__explanation {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 47.58542%; }
+      .health__explanation:last-child,
+      .feed__explanation:last-child {
+        margin-right: 0; } }
 
 /**
  * Create a fully formed type style (sizing and vertical rhythm) by passing in a
@@ -624,7 +702,7 @@ button {
   font-size: 0.69444rem;
   line-height: 2.32992;
   padding: 14.562px;
-  border: 1px solid #8e909a; }
+  border: 1px solid #f7f8fa; }
 
 blockquote {
   font-size: 25.92px;
@@ -645,10 +723,27 @@ strong {
   display: block; }
 
 b {
-  font-weight: 400; }
+  font-weight: 400;
+  color: #3f4047; }
 
 i {
   font-style: italic; }
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: scale(0.4);
+    top: 70%;
+    opacity: 0.2; }
+
+  60% {
+    -webkit-transform: scale(1.2);
+    top: 25%;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: scale(1);
+    top: 30%;
+    opacity: 0; } }
 
 h1, h2, h3, h4, h5, h6, label, blockquote, .hero__header {
   font-family: "proxima-nova",sans-serif;
@@ -659,6 +754,32 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .hero__header {
   font-family: "proxima-nova",sans-serif;
   font-weight: 100;
   font-style: normal; }
+
+.health,
+.feed {
+  padding: 0 5% 0; }
+  @media screen and (min-width: 44em) and (max-width: 69.9em) {
+    .health,
+    .feed {
+      padding: 0; } }
+  @media screen and (min-width: 82em) {
+    .health,
+    .feed {
+      padding: 0; } }
+
+.health,
+.feed {
+  background: #f7f8fa;
+  border-bottom: 4px solid white; }
+
+.health__explanation-heading,
+.feed__explanation-heading {
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.618;
+  text-transform: uppercase;
+  margin-bottom: 14.562px;
+  color: #aaacad; }
 
 header {
   padding: 14.562px; }
@@ -720,3 +841,54 @@ header {
   text-align: center;
   font-weight: 300;
   margin-top: 0.7rem; }
+
+.health,
+.feed {
+  overflow: hidden; }
+
+.health__image {
+  text-align: center;
+  margin-top: 87.372px; }
+
+.feed__image {
+  margin: 58.248px 0 0; }
+
+.health__image-figure {
+  max-width: 11.3125rem; }
+
+.feed__image-figure {
+  max-width: 16.8125rem;
+  margin-bottom: -58.248px; }
+
+.feed__image-phone {
+  position: relative;
+  text-align: center;
+  line-height: 0; }
+
+.feed__image-gesture {
+  background: #f35b5b;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 60px auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-animation-name: slide;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease-in-out; }
+
+.health__explanation,
+.feed__explanation {
+  margin-top: 58.248px;
+  margin-bottom: 87.372px;
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 1.9416;
+  opacity: 0.8; }
+
+@media screen and (min-width: 44em) {
+  .feed__explanation {
+    margin-top: 30%; } }

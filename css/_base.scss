@@ -123,7 +123,7 @@ img {
 button {
     @include font-size($micro);
     padding: $half-spacing-unit;
-    border: 1px solid $grey;
+    border: 1px solid $cool-grey;
 }
 
 blockquote {
@@ -150,6 +150,7 @@ strong {
 
 b {
     font-weight: $base-font-heavy;
+    color: $base;
 }
 
 i {

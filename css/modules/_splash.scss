@@ -69,3 +69,69 @@ header {
 	font-weight: $base-font-light;
 	margin-top: 0.7rem;
 }
+
+.health,
+.feed {
+	@extend %grey-content-section;
+	overflow: hidden;
+}
+
+.health__image {
+	text-align: center;
+	margin-top: $triple-spacing-unit;
+}
+
+.feed__image {
+	margin: $double-spacing-unit 0 0;
+}
+
+.health__image-figure {
+	max-width: 11.3125rem;
+}
+
+.feed__image-figure {
+	max-width: 16.8125rem;
+	margin-bottom: -$double-spacing-unit;
+}
+
+.feed__image-phone {
+	position: relative;
+	text-align: center;
+	line-height: 0;
+}
+
+.feed__image-gesture {
+  background: $red;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 60px auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+
+  -webkit-animation-name: slide;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.health__explanation,
+.feed__explanation {
+	margin-top: $double-spacing-unit;
+	margin-bottom: $triple-spacing-unit;
+	@include font-size($milli);
+	opacity: 0.8;
+}
+
+.feed__explanation {
+	@include media(min-width $tablet-min, 12) {
+		margin-top: 30%;
+	}
+}
+
+.health__explanation-heading,
+.feed__explanation-heading {
+	@extend %explanation-headings;
+}

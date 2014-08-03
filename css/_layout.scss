@@ -38,3 +38,46 @@ header {
 .hero__header {
 	@include span-columns(12);
 }
+
+.health,
+.feed {
+	@extend %container;
+}
+
+.health__wrapper {
+	@include span-columns(12);
+
+	@include media(min-width $tablet-min, 12) {
+		@include span-columns(8);
+		@include shift(2);
+		max-width: 60rem;
+	}
+}
+
+.feed__wrapper {
+	@include span-columns(12);
+
+	@include media(min-width $tablet-min, 12) {
+		@include span-columns(8);
+		@include shift(2);
+		max-width: 60rem;
+	}
+}
+
+.health__image,
+.feed__image {
+	@include span-columns(12);
+
+	@include media(min-width $tablet-min, 12) {
+		@include span-columns(3 of 6);
+	}
+}
+
+.health__explanation,
+.feed__explanation {
+	@include span-columns(12);
+
+	@include media(min-width $tablet-min, 12) {
+		@include span-columns(3 of 6);
+	}
+}

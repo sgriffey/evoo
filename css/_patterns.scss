@@ -40,6 +40,19 @@
 	}
 }
 
+%grey-content-section {
+	background: $cool-grey;
+	@extend %edge-padding;
+	border-bottom: 4px solid $white;
+}
+
+%explanation-headings {
+	@include font-size($zeta);
+	text-transform: uppercase;
+	margin-bottom: $half-spacing-unit;
+	color: $simple-grey;
+}
+
 
 
 
