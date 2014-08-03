@@ -23,11 +23,9 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="header__title">EVOO</h1>
-  </header>
   <main>
     <section class="hero">
+      <img class="hero__badge" src="assets/evoo-badge.svg" />
       <div class="hero__context">
         <h2 class="hero__header">Browse · Plan · Cook · Serve</h2>
         <span class="hero__subhead">Uncork your inner culinary artist</span>
@@ -35,13 +33,13 @@
     </section>
     <section class="health">
       <div class="health__wrapper">
-        <figure class="health__image">
-          <img src="assets/health.svg" class="health__image-figure" title="dietary constraints" alt="recipes that meet your needs"/>
-        </figure>
         <div class="health__explanation">
           <h3 class="health__explanation-heading">Dedicated to your Diet</h3>
           <p class="health__explanation-text"><b>EVOO reccommends recipes that abide to strict dietary constraints.</b> Gluten-Free, Dairy-Free, Carb-Free, Sugar-Free, Low-Fat, Vegetarian, Vegan, Paleo, South Beach &mdash; the list of diets and constraints goes on and on. Everybody is different.</p>
         </div>
+        <figure class="health__image">
+          <img src="assets/health.svg" class="health__image-figure" title="dietary constraints" alt="recipes that meet your needs"/>
+        </figure>
       </div>
     </section>
     <section class="feed">
@@ -57,6 +55,13 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="email">
+      <form class="email__form">
+        <label class="email__form-label">Coming soon for iPhone.</label>
+        <input class="email__form-input" type="email" placeholder="My Email is..."></input>
+        <button class="email__form-button" >reserve my seat</button>
+      </form>
     </section>
   </main>
 </body>
