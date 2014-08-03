@@ -42,13 +42,8 @@ header {
 .health,
 .feed,
 .email,
-.iphone {
+.checkout {
 	@extend %container;
-}
-
-.iphone__wrapper {
-	max-width: 16.8125rem;
-	height: auto;
 }
 
 .health__wrapper {
@@ -71,8 +66,19 @@ header {
 	}
 }
 
+.checkout__wrapper {
+	@include span-columns(12);
+
+	@include media(min-width $tablet-min, 12) {
+		@include span-columns(8);
+		@include shift(2);
+		max-width: 60rem;
+	}
+}
+
 .health__image,
-.feed__image {
+.feed__image,
+.checkout__image {
 	@include span-columns(12);
 
 	@include media(min-width $tablet-min, 12) {
@@ -81,7 +87,8 @@ header {
 }
 
 .health__explanation,
-.feed__explanation {
+.feed__explanation,
+.checkout__explanation {
 	@include span-columns(12);
 
 	@include media(min-width $tablet-min, 12) {

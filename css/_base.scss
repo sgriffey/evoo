@@ -135,10 +135,6 @@ blockquote {
 
 }
 
-main {
-    @include px-rem(margin-bottom, $base-spacing-unit * 3);
-}
-
 figure {
     line-height: 0;
 }

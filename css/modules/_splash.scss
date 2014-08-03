@@ -13,11 +13,10 @@
 .hero__badge {
 	position: absolute;
 	top: 0;
-	left: 50%;
+	left: 0;
 	max-height: 6.25rem;
 	width: auto;
-	-webkit-transform: translateX(-50%);
-	margin-top: $half-spacing-unit;
+	margin: $half-spacing-unit 0 0 $half-spacing-unit;
 }
 
 .hero__context {
@@ -48,6 +47,8 @@
 		display: block;
 		opacity: 0.6;
 	}
+	
+	@extend %ease-transition;
 }
 
 .hero__subhead {
@@ -60,12 +61,14 @@
 
 .health,
 .feed,
-.email {
+.email,
+.checkout {
 	@extend %grey-content-section;
 	overflow: hidden;
 }
 
-.health__wrapper {
+.health__wrapper,
+.checkout__wrapper {
 	margin-top: $double-spacing-unit;
 }
 
@@ -78,13 +81,27 @@
 	margin: $double-spacing-unit 0 0;
 }
 
+.checkout__image {
+	margin: $double-spacing-unit 0 $triple-spacing-unit;
+}
+
 .health__image-figure {
-	max-width: 11.3125rem;
+	max-width: 11.25rem;
 }
 
 .feed__image-figure {
 	max-width: 16.8125rem;
 	margin-bottom: -$double-spacing-unit;
+}
+
+.checkout__image-figure {
+	max-width: 28.125rem;
+}
+
+.checkout__image-container {
+	position: relative;
+	text-align: center;
+	line-height: 0;
 }
 
 .feed__image-phone {
@@ -108,13 +125,15 @@
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 2.5s;
   -webkit-animation-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(.17,.67,.83,.67)
 }
 
 .health__explanation,
-.feed__explanation {
+.feed__explanation,
+.checkout__explanation {
 	margin-top: $double-spacing-unit;
 	margin-bottom: $triple-spacing-unit;
-	@include font-size($milli);
+	@include font-size($zeta);
 }
 
 .feed__explanation {
@@ -124,7 +143,8 @@
 }
 
 .health__explanation-heading,
-.feed__explanation-heading {
+.feed__explanation-heading,
+.checkout__explanation-heading {
 	@extend %explanation-headings;
 }
 
