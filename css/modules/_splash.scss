@@ -1,0 +1,71 @@
+header {
+	padding: $half-spacing-unit;
+}
+
+.header__title {
+	&::before {
+		content: '';
+		display: block;
+		background: url('assets/evoo__logo.svg');
+		background-repeat: no-repeat;
+		height: 2rem;
+		width: 2.1875rem;
+		margin: 0 auto;
+	}
+
+	font-family: $base-font-family;
+	font-weight: $base-font-heavy;
+	text-align: center;
+	@include font-size($milli);
+	margin: 0;
+}
+
+.hero {
+	background: url('assets/essentials.png') no-repeat center center;
+	background-size: cover;
+	min-height: 25rem;
+	position: relative;
+
+	@include media(min-width $tablet-min, 12) {
+		min-height: 35rem;
+	}
+
+}
+
+.hero__context {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hero__header {
+	@extend %sans-serif-heavy;
+	color: white;
+	@include font-size($delta);
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+
+	span {
+		@extend %sans-serif-light;
+	}
+
+	&::after {
+		content: '';
+		height: 1px;
+		background: $white;
+		width: 12rem;
+		margin: 0.7rem auto 0;
+		display: block;
+		opacity: 0.6;
+	}
+}
+
+.hero__subhead {
+	color: white;
+	@include font-size($epsilon);
+	text-align: center;
+	font-weight: $base-font-light;
+	margin-top: 0.7rem;
+}

@@ -1,0 +1,40 @@
+%container {
+	@include outer-container;
+	max-width: 100%;
+
+	@include media(min-width $tablet-min max-width $tablet-max, 12) {
+		
+	}
+
+	@include media(min-width $desktop-min, 12) {
+		
+	}
+}
+
+main {
+	@extend %container;
+}
+
+header {
+	@extend %container;
+}
+
+.header__title {
+	@include span-columns(12);
+}
+
+.hero {
+	@extend %container;
+}
+
+.hero__context {
+	@include span-columns(12);
+}
+
+.hero__subhead {
+	@include span-columns(12);
+}
+
+.hero__header {
+	@include span-columns(12);
+}

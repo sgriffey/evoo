@@ -1,0 +1,92 @@
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Cribbed from Harry Roberts' Inuit: http://inuitcss.com/
+ */
+
+@mixin font-size($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*1rem;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+@mixin rems($property, $size){
+    #{$property}: $size;
+    #{$property}:($size / $base-font-size)*1rem;
+}
+
+/*
+ * Pixels to rems :: adapted from Joel Han - http://designbyjoel.com/blog/2013-02-28-sass-rems/
+ */
+
+/* Usage:
+ *
+ * p {
+ *   @include px-rem(padding, 1, 2, 3, 4);
+ *   @include px-rem(margin-bottom, 10 auto 0 auto);
+ * 
+ * }
+ *
+ * 
+ * Result:
+ *
+ * p {
+ *   padding: 16px 32px 48px 60px;
+ *   padding: 1rem 2rem 3rem 4rem;
+ *   margin-bottom: 160px auto 0px auto;
+ *   margin-bottom: 10rem auto 0rem auto;
+ * }
+ *
+ */
+
+@function fix_unit_to_px($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val * $base-font-size};
+    } @else { @return $val};
+  }
+}
+
+@function fix_unit_to_rem($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val+rem};
+    } @else { @return ($val / $base-font-size)*1rem};
+  }
+}
+
+@mixin px-rem($prop, $val...) {
+  $n: length($val);
+  $i: 1;
+
+  $px-list: ();
+  $rem-list: ();
+
+  @while $i <= $n {
+    $px-list: append($px-list, fix_unit_to_px(nth($val, $i)));
+    $rem-list: append($rem-list, fix_unit_to_rem(nth($val, $i)));
+    $i: $i + 1;
+  }
+
+  #{$prop}: $px-list;
+  #{$prop}: $rem-list;
+}
+
+@mixin shadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}

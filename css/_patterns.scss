@@ -1,0 +1,48 @@
+%sans-serif-heavy {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+
+%sans-serif-light {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+%ease-transition {
+	-webkit-transition-timing-function: ease-out;
+	transition: .04s;
+}
+
+%edge-padding {
+	padding: 0 5% 0;
+
+	@include media(min-width $tablet-min max-width $tablet-max, 12) {
+		padding: 0;
+	}
+
+	@include media(min-width $desktop-min, 12) {
+		padding: 0;
+	}
+}
+
+%button {
+	@extend %sans-serif-heavy;
+	@extend %ease-transition;
+	background: transparent;
+	border: 1px solid rgba($white, .6);
+	@include px-rem(padding, $zeta);
+	border-radius: 2px;
+
+	&:hover {
+		border-color: $white;
+	}
+}
+
+
+
+
+
+
+
