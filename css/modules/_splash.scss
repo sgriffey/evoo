@@ -3,11 +3,6 @@
 	background-size: cover;
 	min-height: 25rem;
 	position: relative;
-
-	@include media(min-width $tablet-min, 12) {
-		min-height: 35rem;
-	}
-
 }
 
 .hero__badge {
@@ -72,12 +67,20 @@
 
 .health__wrapper,
 .checkout__wrapper {
-	margin-top: $double-spacing-unit;
+
+	@include media(min-width $tablet-min, 12) {
+		margin-top: $double-spacing-unit;
+	}
 }
 
 .health__image {
 	text-align: center;
-	margin-top: $double-spacing-unit;
+	margin-bottom: $double-spacing-unit;
+
+	@include media(min-width $tablet-min, 12) {
+		margin-top: $double-spacing-unit;
+		margin-bottom: 0;
+	}
 }
 
 .feed__image {
@@ -135,8 +138,11 @@
 .feed__explanation,
 .checkout__explanation {
 	margin-top: $double-spacing-unit;
-	margin-bottom: $triple-spacing-unit;
 	@include font-size($zeta);
+
+	@include media(min-width $tablet-min, 12) {
+		margin-bottom: $triple-spacing-unit;
+	}
 }
 
 .feed__explanation {

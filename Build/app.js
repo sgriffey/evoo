@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var heroList = ["Browse", "Plan", "Cook", "Discover", "Serve"];
+	var heroList = ["Browse", "Plan", "Cook", "Serve"];
 	var delayTime = 1500;
 	var index = 0;
 	var updaterFunction = function() {

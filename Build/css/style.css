@@ -873,9 +873,6 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
   background-size: cover;
   min-height: 25rem;
   position: relative; }
-  @media screen and (min-width: 44em) {
-    .hero {
-      min-height: 35rem; } }
 
 .hero__badge {
   position: absolute;
@@ -926,13 +923,18 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
 .checkout {
   overflow: hidden; }
 
-.health__wrapper,
-.checkout__wrapper {
-  margin-top: 58.248px; }
+@media screen and (min-width: 44em) {
+  .health__wrapper,
+  .checkout__wrapper {
+    margin-top: 58.248px; } }
 
 .health__image {
   text-align: center;
-  margin-top: 58.248px; }
+  margin-bottom: 58.248px; }
+  @media screen and (min-width: 44em) {
+    .health__image {
+      margin-top: 58.248px;
+      margin-bottom: 0; } }
 
 .feed__image {
   margin: 58.248px 0 0; }
@@ -980,10 +982,14 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
 .feed__explanation,
 .checkout__explanation {
   margin-top: 58.248px;
-  margin-bottom: 87.372px;
   font-size: 18px;
   font-size: 1rem;
   line-height: 1.618; }
+  @media screen and (min-width: 44em) {
+    .health__explanation,
+    .feed__explanation,
+    .checkout__explanation {
+      margin-bottom: 87.372px; } }
 
 @media screen and (min-width: 44em) {
   .feed__explanation {
