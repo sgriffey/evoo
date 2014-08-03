@@ -817,7 +817,7 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
   font-weight: 100;
   font-style: normal; }
 
-.email__form-button, .hero__header {
+.email__form-button, .hero__header, .email__form-input {
   -webkit-transition-timing-function: ease-out;
   transition: .04s; }
 
@@ -1022,3 +1022,12 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
   margin-bottom: 29.124px;
   padding: 15px;
   padding: 0.83333rem; }
+  .email__form-input:focus, .email__form-input:active {
+    border-color: #f35b5b;
+    outline: none; }
+
+.email__form-button:focus {
+  outline: none;
+  border-color: #3f4047; }
+.email__form-button:active {
+  outline: none; }

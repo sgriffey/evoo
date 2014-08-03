@@ -185,9 +185,24 @@
 	border: 4px solid $base;
 	margin-bottom: $base-spacing-unit;
 	@include px-rem(padding, $milli);
+	@extend %ease-transition;
+
+	&:focus,
+	&:active {
+		border-color: $red;
+		outline: none;
+	}
 }
 
 .email__form-button {
 	@extend %hard-reset;
 	@extend %button;
+
+	&:focus {
+		outline: none;
+		border-color: $base;
+	}
+	&:active {
+		outline: none;
+	}
 }
