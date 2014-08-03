@@ -1,8 +1,12 @@
 .hero {
-	background: url('assets/essentials.png') no-repeat center center;
+	background: url('https://s3-us-west-1.amazonaws.com/evoo/essentials.jpg') no-repeat center center;
 	background-size: cover;
 	min-height: 25rem;
 	position: relative;
+
+	@include media(min-width $tablet-min, 12) {
+		min-height: 40rem;
+	}
 }
 
 .hero__badge {
@@ -84,7 +88,11 @@
 }
 
 .feed__image {
-	margin: $double-spacing-unit 0 0;
+	margin-top: 0;
+	@include media(min-width $tablet-min, 12) {
+		margin-top: $double-spacing-unit;
+		margin-bottom: 0;
+	}
 }
 
 .checkout__image {

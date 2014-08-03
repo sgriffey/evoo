@@ -869,10 +869,13 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
   color: #3f4047; }
 
 .hero {
-  background: url(../assets/essentials.png) no-repeat center center;
+  background: url("https://s3-us-west-1.amazonaws.com/evoo/essentials.jpg") no-repeat center center;
   background-size: cover;
   min-height: 25rem;
   position: relative; }
+  @media screen and (min-width: 44em) {
+    .hero {
+      min-height: 40rem; } }
 
 .hero__badge {
   position: absolute;
@@ -937,7 +940,11 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
       margin-bottom: 0; } }
 
 .feed__image {
-  margin: 58.248px 0 0; }
+  margin-top: 0; }
+  @media screen and (min-width: 44em) {
+    .feed__image {
+      margin-top: 58.248px;
+      margin-bottom: 0; } }
 
 .checkout__image {
   margin: 58.248px 0 87.372px; }
