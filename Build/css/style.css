@@ -869,7 +869,7 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
   color: #3f4047; }
 
 .hero {
-  background: url(../assets/essentials.jpg) no-repeat center center;
+  background: url("https://s3-us-west-1.amazonaws.com/evoo/essentials.jpg") no-repeat center center;
   background-size: cover;
   min-height: 25rem;
   position: relative; }
