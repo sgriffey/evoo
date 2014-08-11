@@ -137,7 +137,7 @@
 
   -webkit-animation-name: slide;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 2.5s;
+  -webkit-animation-duration: 2s;
   -webkit-animation-timing-function: cubic-bezier(.56,-0.07,0,1.03);
 }
 
@@ -156,10 +156,6 @@
 	@include media(min-width $tablet-min, 12) {
 		margin-top: 30%;
 	}
-}
-
-.hero__juggle {
-	text-align: right;
 }
 
 .health__explanation-heading,

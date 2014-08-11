@@ -981,7 +981,7 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
   -webkit-transform: translate(-50%, -50%);
   -webkit-animation-name: slide;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 2.5s;
+  -webkit-animation-duration: 2s;
   -webkit-animation-timing-function: cubic-bezier(0.56, -0.07, 0, 1.03); }
 
 .health__explanation,
@@ -1000,9 +1000,6 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
 @media screen and (min-width: 44em) {
   .feed__explanation {
     margin-top: 30%; } }
-
-.hero__juggle {
-  text-align: right; }
 
 .email__form {
   margin-top: 87.372px;
