@@ -1,11 +1,11 @@
 .hero {
 	background: url(https://s3-us-west-1.amazonaws.com/evoo/essentials.jpg) no-repeat center center;
 	background-size: cover;
-	min-height: 25rem;
+	height: 100%;
 	position: relative;
 
 	@include media(min-width $tablet-min, 12) {
-		min-height: 40rem;
+		height: 100%;
 	}
 }
 
