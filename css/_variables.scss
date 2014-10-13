@@ -1,24 +1,22 @@
 /* Colors */
 
-$base: #3F4047; //deep slate
-$highlight: #F6F2A7; // light-yellow
-$link: #47C48B; // mint green
-$beige: #E5DCCA; // blue grey
-$off-white: #fafafa; // white with a splash of blue
+$base: #0B0C0C; //Black-blue
+$teal: #85CDC2; // teal
+$orange: #FF885A; // blood-orange
+$yellow: #F6D262; // yellow
 $white: #fff; //white
-$cool-grey: #F7F8FA; //blue-ish grey
-$simple-grey: #AAACAD; //what we use for icons whatnot
-$red: #F35B5B; //red joy of cooking
+$elephant-tusk: #F7F8FA; //blue-ish grey
 
 /**
  * Typography
  */
 
-$base-font-size:    18px;
-$base-line-height:  1.618 * $base-font-size;
+$base-font-size:    16px;
+$base-line-height:  1.4 * $base-font-size;
 $base-paragraph:  1.2 * $base-font-size;
 
 $base-spacing-unit: $base-line-height;
+$quarter-spacing-unit: $base-spacing-unit / 4;
 $half-spacing-unit: $base-spacing-unit / 2;
 $line-height-ratio: $base-line-height / $base-font-size;
 $double-spacing-unit: $base-line-height * 2;
@@ -67,7 +65,7 @@ $yocto:			modular-scale($base-font-size, -8, 1.2);
 $column: golden-ratio(1rem, 3); // Column width
 $gutter: golden-ratio(1rem, 1); // Gutter between each two columns
 $grid-columns: 12; // Total number of columns in the grid
-$max-width: 70rem; // Max-width of the outer container
+$max-width: 91.125rem;; // Max-width of the outer container
 $border-box-sizing: true; // Makes all elements have a border-box layout
 $default-feature: min-width; // Default @media feature for the breakpoint() mixin
 $default-layout-direction: LTR;

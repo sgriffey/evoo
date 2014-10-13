@@ -1,114 +1,14 @@
-%container {
+%full-container {
 	@include outer-container;
-	max-width: 100%;
-
-	@include media(min-width $tablet-min max-width $tablet-max, 12) {
-		
-	}
-
-	@include media(min-width $desktop-min, 12) {
-		
-	}
+	max-width: 91.125rem; //1460px % 16px
 }
 
-main {
-	@extend %container;
+%narrow-container {
+	@include outer-container;
+	max-width: 50rem; //800px % 16px
 }
 
-header {
-	@extend %container;
-}
-
-.header__title {
-	@include span-columns(12);
-}
-
-.hero {
-	@extend %container;
-}
-
-.hero__context {
-	@include span-columns(12);
-}
-
-.hero__subhead {
-	@include span-columns(12);
-}
-
-.hero__header {
-	@include span-columns(12);
-}
-
-.health,
-.feed,
-.email,
-.checkout {
-	@extend %container;
-}
-
-.health__wrapper {
-	@include span-columns(12);
-
-	@include media(min-width $tablet-min, 12) {
-		@include span-columns(8);
-		@include shift(2);
-		max-width: 60rem;
-	}
-}
-
-.feed__wrapper {
-	@include span-columns(12);
-
-	@include media(min-width $tablet-min, 12) {
-		@include span-columns(8);
-		@include shift(2);
-		max-width: 60rem;
-	}
-}
-
-.checkout__wrapper {
-	@include span-columns(12);
-
-	@include media(min-width $tablet-min, 12) {
-		@include span-columns(8);
-		@include shift(2);
-		max-width: 60rem;
-	}
-}
-
-.health__image,
-.feed__image,
-.checkout__image {
-	@include span-columns(12);
-
-	@include media(min-width $tablet-min, 12) {
-		@include span-columns(3 of 6);
-	}
-}
-
-.health__explanation,
-.feed__explanation,
-.checkout__explanation {
-	@include span-columns(12);
-
-	@include media(min-width $tablet-min, 12) {
-		@include span-columns(3 of 6);
-	}
-}
-
-.email__form {
-	@include span-columns(12);
-	@extend %edge-padding;
-
-	@include media(min-width $tablet-min, 12) {
-		@include span-columns(6);
-		@include shift(3);
-	}
-}
-
-.email__form-input,
-.email__form-label,
-.email__form-button {
-	@extend %hard-reset;
-	@include span-columns(12);
+%wrapper {
+	@include outer-container;
+	max-width: 32.8rem; //590px
 }

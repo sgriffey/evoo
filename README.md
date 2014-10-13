@@ -1,4 +1,4 @@
-evoo
+Ravti
 ====
 
-Splash Page for our YC Hacks app
+Ravti Corporate site
