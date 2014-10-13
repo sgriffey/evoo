@@ -20,6 +20,54 @@
     #{$property}:($size / $base-font-size)*1rem;
 }
 
+/*
+ * Pixels to rems :: adapted from Joel Han - http://designbyjoel.com/blog/2013-02-28-sass-rems/
+ */
+
+/* Usage:
+ *
+ * p {
+ *   @include px-rem(padding, 1, 2, 3, 4);
+ *   @include px-rem(margin-bottom, 10 auto 0 auto);
+ * 
+ * }
+ *
+ * 
+ * Result:
+ *
+ * p {
+ *   padding: 16px 32px 48px 60px;
+ *   padding: 1rem 2rem 3rem 4rem;
+ *   margin-bottom: 160px auto 0px auto;
+ *   margin-bottom: 10rem auto 0rem auto;
+ * }
+ *
+ */
+
+@function fix_unit_to_px($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val * $base-font-size};
+    } @else { @return $val};
+  }
+}
+
+@function fix_unit_to_rem($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val+rem};
+    } @else { @return ($val / $base-font-size)*1rem};
+  }
+}
+
 @mixin px-rem($prop, $val...) {
   $n: length($val);
   $i: 1;
@@ -37,11 +85,8 @@
   #{$prop}: $rem-list;
 }
 
-// Vendor prefixing
-@mixin vp($name, $argument) {
-  -webkit-#{$name}: #{$argument};
-  -ms-#{$name}: #{$argument};
-  -moz-#{$name}: #{$argument};
-  -o-#{$name}: #{$argument};
-  #{$name}: #{$argument};
+@mixin shadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
 }

@@ -1,0 +1,24 @@
+.is-hidden {
+	@extend %visuallyhidden;
+}
+
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: scale(0.4);
+    top: 70%;
+    opacity: 0.2;
+  }
+
+  60% {
+    -webkit-transform: scale(1.2);
+    top: 25%;
+    opacity: 1;
+  }
+
+  100% {
+  	-webkit-transform: scale(1);
+    top: 30%;
+    opacity: 0;
+  }
+}
