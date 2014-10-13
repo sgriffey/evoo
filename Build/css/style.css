@@ -875,11 +875,11 @@ h1, h2, h3, h4, h5, h6, label, blockquote, .email__form-button, .hero__header {
 .hero {
   background: url(https://s3-us-west-1.amazonaws.com/evoo/essentials.jpg) no-repeat center center;
   background-size: cover;
-  min-height: 25rem;
+  height: 100%;
   position: relative; }
   @media screen and (min-width: 44em) {
     .hero {
-      min-height: 40rem; } }
+      height: 100%; } }
 
 .hero__badge {
   position: absolute;
